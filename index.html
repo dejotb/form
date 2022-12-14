@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --marine-blue: hsl(213, 96%, 18%);
+        --purplish: hsl(243, 100%, 62%);
+        --pastel: hsl(228, 100%, 84%);
+        --light-blue: hsl(206, 94%, 87%);
+        --strawberry-red: hsl(354, 84%, 57%);
+
+        --cool-gray: hsl(231, 11%, 63%);
+        --light-gray: hsl(229, 24%, 87%);
+        --magnolia: hsl(217, 100%, 97%);
+        --alabaster: hsl(231, 100%, 99%);
+        --white: hsl(0, 0%, 100%);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-family: "ubuntu";
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      main {
+        background-color: var(--light-gray);
+        width: 100%;
+        display: grid;
+        justify-items: center;
+      }
+
+      .header {
+        display: grid;
+        justify-items: center;
+
+        background-image: url("./assets/images/bg-sidebar-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 25vh;
+        width: 100%;
+      }
+
+      ul {
+        padding-top: 40px;
+        list-style-type: none;
+        display: flex;
+        grid-gap: 16px;
+        height: fit-content;
+      }
+
+      ul li {
+        border: white solid 1px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        color: white;
+        font-weight: 700;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      ul li:hover {
+        background-color: var(--light-blue);
+        color: var(--marine-blue);
+      }
+
+      h2 {
+        font-size: 24px;
+        color: var(--marine-blue);
+      }
+
+      .card {
+        display: grid;
+        grid-gap: 10px;
+        width: 90vw;
+        margin-top: -15%;
+        padding: 35px clamp(25px, 5vw, 30px);
+        background-color: var(--white);
+        border-radius: 15px;
+      }
+
+      .card p {
+        color: var(--cool-gray);
+      }
+
+      .card__form {
+        display: grid;
+        grid-gap: 20px;
+      }
+      .card__form div {
+        display: grid;
+        grid-gap: 5px;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px var(--light-gray) solid;
+        border-radius: 5px;
+        color: var(--cool-gray);
+        /* border-color: var(--light-gray); */
+      }
+      label {
+        color: var(--marine-blue);
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar start -->
+
+    <header class="header">
+      <ul class="steps">
+        <li id="info">1</li>
+        <li id="plan">2</li>
+        <li id="add-ons">3</li>
+        <li id="summary">4</li>
+      </ul>
+    </header>
+
+    <!-- Step 1 Your Step 2 Select plan Step 3 Add-ons Step 4 Summary -->
+
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+
+    <main>
+      <section id="info" class="info card">
+        <h2>Personal info</h2>
+        <p>Please provide your name, email address, and phone number.</p>
+        <form class="card__form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="e.g. Stephen King" />
+          </div>
+          <div>
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="e.g. stephenking@lorem.com"
+            />
+          </div>
+          <div>
+            <label for="telephone">Phone number</label>
+            <input
+              type="tel"
+              name="telephone"
+              placeholder="e.g. +1 234 567 890"
+            />
+          </div>
+        </form>
+      </section>
+      <section id="plan" class="plan"></section>
+      <section id="add-ons" class="add-ons"></section>
+      <section id="summary" class="summary"></section>
+    </main>
+
+    Next Step
+
+    <!-- Step 1 end -->
+
+    <!-- Step 2 start -->
+
+    Select your plan You have the option of monthly or yearly billing. Arcade
+    $9/mo Advanced $12/mo Pro $15/mo Monthly Yearly Go Back Next Step
+
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+
+    Pick add-ons Add-ons help enhance your gaming experience. Online service
+    Access to multiplayer games +$1/mo Larger storage Extra 1TB of cloud save
+    +$2/mo Customizable Profile Custom theme on your profile +$2/mo Go Back Next
+    Step
+
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+
+    Finishing up Double-check everything looks OK before confirming.
+
+    <!-- Dynamically add subscription and add-on selections here -->
+
+    Total (per month/year) Go Back Confirm
+
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+
+    Thank you! Thanks for confirming your subscription! We hope you have fun
+    using our platform. If you ever need support, please feel free to email us
+    at support@loremgaming.com.
+
+    <!-- Step 5 end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
